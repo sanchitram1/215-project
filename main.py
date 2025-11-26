@@ -57,13 +57,14 @@ def verify_security(conn):
 def run_visualization(conn, sql_file, title, chart_type="bar"):
     """
     Reads SQL from a file, executes it, and generates a Plotly chart.
+    Returns the figure object instead of displaying it.
     """
     print(f"\n--- VISUALIZATION: {title} ---")
 
     # 1. Read the SQL file
     if not os.path.exists(sql_file):
         print(f"Error: File {sql_file} not found.")
-        return
+        return None
 
     with open(sql_file, "r") as f:
         query = f.read()
@@ -82,7 +83,7 @@ def run_visualization(conn, sql_file, title, chart_type="bar"):
                 y=df.columns[1],
                 title=title,
                 color=df.columns[1],
-                template="plotly_dark",
+                template="plotly",
             )
         elif chart_type == "pie":
             fig = px.pie(
@@ -90,7 +91,7 @@ def run_visualization(conn, sql_file, title, chart_type="bar"):
                 names=df.columns[0],
                 values=df.columns[1],
                 title=title,
-                template="plotly_dark",
+                template="plotly",
             )
         elif chart_type == "donut":
             fig = px.pie(
@@ -99,15 +100,95 @@ def run_visualization(conn, sql_file, title, chart_type="bar"):
                 values=df.columns[1],
                 title=title,
                 hole=0.4,
-                template="plotly_dark",
+                template="plotly",
             )
 
-        # This will open the chart in your web browser
-        fig.show()
+        # Set smaller height for printing (fits on one page)
+        fig.update_layout(height=300, margin=dict(l=20, r=20, t=50, b=20))
+
         print("   > Plot generated successfully.")
+        return fig
 
     except Exception as e:
         print(f"Error generating visualization: {e}")
+        return None
+
+
+def create_dashboard(figures, output_file="dashboard.html"):
+    """
+    Combines multiple Plotly figures into a single HTML dashboard page.
+    """
+    if not figures or all(f is None for f in figures):
+        print("Error: No valid figures to combine.")
+        return
+
+    # Create HTML content with all charts
+    html_content = """
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Database Visualization Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-3.3.0.min.js"></script>
+    <style>
+        @media print {
+            body {
+                margin: 0;
+                padding: 10px;
+            }
+            .chart-container {
+                page-break-inside: avoid;
+                margin-bottom: 15px;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+            margin: 0;
+            padding: 20px;
+        }
+        .chart-container {
+            margin-bottom: 20px;
+            background-color: #ffffff;
+            padding: 10px;
+            border: 1px solid #e0e0e0;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+        .plotly-graph-div {
+            height: 300px !important;
+        }
+    </style>
+</head>
+<body>
+    <h1>Database Visualization Dashboard</h1>
+"""
+
+    # Add each figure's HTML (extract just the div content)
+    for i, fig in enumerate(figures):
+        if fig is not None:
+            html_content += '<div class="chart-container">\n'
+            # Use full_html=False to get just the div, not a full HTML document
+            chart_html = fig.to_html(
+                include_plotlyjs=False, full_html=False, div_id=f"chart-{i}"
+            )
+            html_content += chart_html
+            html_content += "</div>\n"
+
+    html_content += """
+</body>
+</html>
+"""
+
+    # Write to file
+    with open(output_file, "w") as f:
+        f.write(html_content)
+
+    print(f"\n✅ Dashboard saved to: {output_file}")
+    print(f"   Open {output_file} in your browser to view all charts.")
 
 
 def main():
@@ -128,26 +209,38 @@ def main():
         # 2. Run Visualizations from SQL files
         # note that these arguments need the sql files to be
         # inside a sql folder
-        run_visualization(
+        figures = []
+
+        fig1 = run_visualization(
             conn,
             "sql/part_labor.sql",
             "Top 10 Parts by Labor Intensity",
             chart_type="bar",
         )
+        if fig1:
+            figures.append(fig1)
 
-        run_visualization(
+        fig2 = run_visualization(
             conn,
             "sql/customer_revenue.sql",
             "Top Customers by Revenue",
             chart_type="pie",
         )
+        if fig2:
+            figures.append(fig2)
 
-        run_visualization(
+        fig3 = run_visualization(
             conn,
             "sql/order_status.sql",
             "Current Order Status Distribution",
             chart_type="donut",
         )
+        if fig3:
+            figures.append(fig3)
+
+        # 3. Combine all charts into a single dashboard
+        if figures:
+            create_dashboard(figures)
 
         conn.close()
         print("\n--- End of Analysis ---")
