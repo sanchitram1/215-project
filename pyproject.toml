@@ -1,0 +1,10 @@
+[project]
+name = "215-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "alembic>=1.14.1",
+    "psycopg2>=2.9.10",
+]

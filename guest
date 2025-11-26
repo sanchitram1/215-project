@@ -1,0 +1,618 @@
+select * from public.project_constitutions where migrated_staking_address = '0xb557C886DBbE291457E6c7B0AB2A37121Ec7D69D';
+select * from public.projects where id = '7708ac2a-1b60-4753-940f-937d018de82b';
+select * from public.project_constitutions where migrated_staking_address = '0xb557C886DBbE291457E6c7B0AB2A37121Ec7D69D';
+select * from public.projects where id = '9bf8f4e4-ae48-48f3-80c9-1f12bd4f8e03';
+select * from public.project_constitutions where migrated_staking_address = '0xb557C886DBbE291457E6c7B0AB2A37121Ec7D69D';
+select * from public.projects where id = '9bf8f4e4-ae48-48f3-80c9-1f12bd4f8e03';
+select * from public.projects where id = '9bf8f4e4-ae48-48f3-80c9-1f12bd4f8e03';
+\c app
+select * from public.users where tea_username = 'very15';
+select * from public.users where address = '0x45EAd2F32Bd9e2aFC5638De2CDE672D52fbD0889';
+select * from public.users where address = '0x45EAd2F32Bd9e2aFC5638De2CDE672D52fbD0889';
+select * from public.user_projects where safe_address = '0x45EAd2F32Bd9e2aFC5638De2CDE672D52fbD0889';
+select * from public.users where address = '0x45EAd2F32Bd9e2aFC5638De2CDE672D52';
+select * from public.user_projects where safe_address = '0x95ADCcEf04924d5458d9938d1aEf88e83586117a';
+\c chai
+\c app
+select * from public.user_projects where safe_address = '0x95ADCcEf04924d5458d9938d1aEf88e83586117a';
+select * from public.users where tea_username = 'tsmitty11'
+;
+\q
+select safe_address, tea_migrated_at from public.users u where tea_username = 
+'tsmitty11';
+\c chai
+select id from public.projects p where search_name in ('teajang3', 'yogolemu', 'pkgx.sh');
+select p.id, pc.treasury_address, pc.migrated_claimed_amt, pc.staking_address, pc.migrated_staking_address from public.projects p join public.project_constitutions pc on pc.project_id = p.id where search_name in ('teajang33', 'yogolemu', 'pkgx.sh');
+\c app
+select * from public.users u tea_username = 'tsmitty11';
+select * from public.users u where tea_username = 'tsmitty11';
+select * from public.users u where tea_username = 'tsmitty11';
+select * from public.users u where tea_username = 'tsmitty11';
+\q
+select * from public.users u where tea_username = 'tsmitty11';
+select id from public.projects p where search_name in ('teajang3', 'yogolemu', 'pkgx.sh');
+\c chai
+select id from public.projects p where search_name in ('teajang3', 'yogolemu', 'pkgx.sh');
+select id from public.projects p where search_name in ('teajang33', 'yogolemu', 'pkgx.sh');
+select id from public.projects p where search_name in ('teajang33', 'yogolemu', 'pkgx.sh', '@zaenalznl/polehan');
+select pc.staking_address from public.projects p join public.project_constitutions pc on p.id = pc.project_id where search_name in ('teajang33', 'yogolemu', 'pkgx.sh', '@zaenalznl/polehan');
+select pc.staking_address from public.projects p join public.project_constitutions pc on p.id = pc.project_id where search_name in ('teajang33', 'yogolemu', 'pkgx.sh', '@zaenalznl/polehan', '@troyhandika/anjimehbangetluwh');
+\q
+select * from public.users where tea_username = 'lucas-px1'
+;
+update public.users set tea_migrated_at = null where tea_username = 'lucas-px1';
+\q
+\c chai
+select * from public.project_constitutions where migrated_claimed_amt = '0';
+select count(2) from public.project_constitutions where migrated_claimed_amt = '0';
+\q
+select * from public.projects p where p.id = '1fd19296-6ca9-472f-863b-47659e1f3a7c';
+select * from public.user_projects p where p.project_id = '1fd19296-6ca9-472f-863b-47659e1f3a7c';
+update public.user_projects set tea_migrated_at = NULL where p.project_id = '1fd19296-6ca9-472f-863b-47659e1f3a7c';
+update public.user_projects set tea_migrated_at = NULL where project_id = '1fd19296-6ca9-472f-863b-47659e1f3a7c';
+\c chai
+select project_id, treasury_address, staking_address, migrated_staking_address from public.project_constitutions where project_id = '1fd19296-6ca9-472f-863b-47659e1f3a7c';
+\q
+select * from public.project_constitutions where staking_address = '0x7AFa177a70996d55Ae620baa4Ad5Ff8dd8653839';
+select * from public.project_constitutions where treasury_address = '0x7AFa177a70996d55Ae620baa4Ad5Ff8dd8653839';
+\c app
+select * from public.users where tea_username = 'rustsol';
+select * from public.user_projects where safe_address = '0x0b85D17097dF0854cc666B447A9d5c349c345005';
+update public.user_projects set tea_migrated_at = NULL where safe_address = '0x0b85D17097dF0854cc666B447A9d5c349c345005' and project_id = '0899ddc3-7bb4-48ee-a938-e3c6fe4307f7';
+select * from public.users where safe_address = '0x7AFa177a70996d55Ae620baa4Ad5Ff8dd8653839';
+\c chai
+select * from public.project_constitutions where treasury_address = '0x7AFa177a70996d55Ae620baa4Ad5Ff8dd8653839';
+select * from public.project_constitutions where staking_address = '0x7AFa177a70996d55Ae620baa4Ad5Ff8dd8653839';
+\q
+select p.search_name, p.package_managers, p.created_at from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' limit 1;
+select p.search_name, p.package_managers, p.created_at, p.source from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' limit 1;
+select p.search_name, p.package_managers, p.created_at, p.source from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' limit 10;
+select p.search_name, p.package_managers, p.created_at, p.source from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' and package_managers = '{"npm"}' limit 10;
+select count(1) from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' and package_managers = '{"npm"}' limit 10;
+select count(1) from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' and package_managers = '{"npm"}';
+select p.search_name, p.package_managers, p.created_at, p.source from public.projects p join public.project_constitutions pc on p.id = pc.project_id where p."source" = '' and package_managers = '{"npm"}';
+select p.search_name, npr.is_spam, npr.spam_score, npr.* from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}' limit 1;
+select p.search_name, npr.is_spam, npr.spam_score, npr.project_url, npr.project_url_source from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}' limit 1;
+select p.search_name, npr.is_spam, npr.spam_score, npr.project_url, npr.project_url_source from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}' limit 10;
+select p.search_name, npr.is_spam, npr.spam_score, npr.project_url_source from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}' limit 10;
+select p.search_name, npr.is_spam, npr.spam_score, npr.project_url_source from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}' limit 100;
+explain update public.projects set is_asdasdaasdasdasdas join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}';
+explain update public.projects set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}';
+explain update public.projects set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and p.package_managers = '{"npm"}';
+explain update npr set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and p.package_managers = '{"npm"}';
+explain update npr set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw as npr on npr.project_name = p.search_name where p."source" = '' and p.package_managers = '{"npm"}';
+explain update chai_staging.npm_projects_raw set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw as npr on npr.project_name = p.search_name where p."source" = '' and p.package_managers = '{"npm"}';
+select count(1) from public.projects p join public.project_constitutions pc on p.id = pc.project_id join chai_staging.npm_projects_raw npr on npr.project_name = p.search_name where p."source" = '' and package_managers = '{"npm"}';
+update chai_staging.npm_projects_raw set is_spam = true from public.projects as p join public.project_constitutions as pc on p.id = pc.project_id join chai_staging.npm_projects_raw as npr on npr.project_name = p.search_name where p."source" = '' and p.package_managers = '{"npm"}';
+\d+
+select p.search_name, p.created_at, pc.registration_date from public.projects p join public.project_constitutions pc on pc.project_id = p.id where p.created_at > '2024-01-26'::timestamp and p.package_managers = '{"npm"}';
+select p.search_name, p.created_at, pc.registration_date from public.projects p join public.project_constitutions pc on pc.project_id = p.id where p.created_at > '2024-01-26'::timestamp and p.package_managers = '{"npm"}' and search_name not like '%ondionys%';
+select p.search_name, p.created_at, pc.registration_date from public.projects p join public.project_constitutions pc on pc.project_id = p.id where p.created_at > '2024-01-26'::timestamp and p.package_managers = '{"npm"}' and search_name not like '%onedionys%';
+select count(1) from public.projects p join public.project_constitutions pc on pc.project_id = p.id where p.created_at > '2024-01-26'::timestamp and p.package_managers = '{"npm"}' and search_name not like '%onedionys%';
+\q
+CREATE UNIQUE INDEX project_constitutions_bounty_address_key_test ON project_constitutions (bounty_address) NULLS NOT DISTINCT
+;
+alter table donations rename column amount to tea_donation;
+select * from _prisma_migrations where id = '41a9228b-f36b-44c9-b0e1-3b8f6a86ca05';
+delete from _prisma_migrations where id = '41a9228b-f36b-44c9-b0e1-3b8f6a86ca05';
+delete from _prisma_migrations where id = '15a71bfd-97e1-40cc-b119-95f987b597b9';
+select p.id, p.name from projects p join project_constitutions pc on p.id = pc.project_id limit 2;
+select p.id, p.search_name from projects p join project_constitutions pc on p.id = pc.project_id limit 2;
+insert into public.sources values ('00e90c80-d1cb-4f3e-8730-324719083ddb', '00e9275b-7c02-4a5a-9b08-36719f5a4de5');
+select * 
+from sources where start_id = '00e90c80-d1cb-4f3e-8730-324719083ddb';
+select * from sources s left join project_constitutions pc on s.end_id = pc.project_id where start_id = '00e90c80-d1cb-4f3e-8730-324719083ddb';
+select s.*, pc.treasury_address from sources s left join project_constitutions pc on s.end_id = pc.project_id where start_id = '00e90c80-d1cb-4f3e-8730-324719083ddb';
+SELECT * 
+FROM pg_sequences ps 
+WHERE ps.sequencename = 'feature_flags_feature_flags_id_seq';
+SELECT setval('feature_flags_feature_flags_id_seq', 21);
+select * from projects;
+\q
+-- generate necessary extensions (apparently for digest)
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pg_bigm";
+\q
+CREATE DATABASE chai;
+\1
+\?
+\d
+\1
+\?
+\c chai
+\q
+CREATE SCHEM chai_processed;
+CREATE SCHEMA chai_processed;
+CREATE SCHEMA chai_staging;
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS "pg_bigm";
+\q
+INSERT INTO quests (challenge_id, ui_id, name, description, helper_text , multiplier_text , multiplier_amount , points, notification_summary , "order")
+SELECT 8 as challenge_id, ui_id, name, description, helper_text , multiplier_text , multiplier_amount , points, notification_summary , "order"
+FROM quests
+WHERE challenge_id = 7;
+\d+
+select * from tea ;
+select f, t from tea limit 2;
+\d+
+\d
+select 1;
+\d+
+delete from chai_processed.agg_duplicates where project_id = '194d635e-1854-4c9c-8a1d-9ab2acb27be7';
+\q
+\d+
+\l
+\l
+\c chai
+\t
+\d
+\c chai
+\d+
+\c chai
+\d+
+select * form projects;
+select * from projects;
+\c chai
+select * from projects;
+select * from projects;
+select * from projects limi 10
+;
+select * from projects limit 10;
+select * from projects limit 10;
+\q
+select * from projects;
+select * from projects limit 1;
+\d
+\d+
+\d projects
+select * from package_managers;
+select * from package_managers;
+\d+ packages
+\d+ packages
+\d+
+select * from public.tx limit 10
+;
+select * from public.tx limit 1;
+\copy (select * from projects p where 'npm' = any(p.package_managers) and created_at < '2024-02-01'::timestamp) to '/Users/sanch/tea/data/npm-projects.csv' csv header
+\copy (select concat('npm/', project_name) as project_derived_key, project_name as name, id as import_id from projects p where 'npm' = any(p.package_managers) and created_at < '2024-02-01'::timestamp) to '/Users/sanch/tea/data/npm-projects.csv' csv header
+CREATE TABLE temp_import (LIKE PACKAGES);
+\copy temp_import (derived_id, name, import_id, id, created_at, updated_at, package_manager_id) FROM '/Users/sanch/tea/data/full-npm-public-projects.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',')
+\copy temp_import (derived_id, name, import_id, id, created_at, updated_at, package_manager_id) FROM '/Users/sanch/tea/data/full-npm-public-projects.csv' WITH (FORMAT csv, HEADER true, DELIMITER ',')
+SELECT COUNT(1) FROM legacy_dependencies;
+SELECT COUNT(1) FROM legacy_dependencies;
+select * from kycs;
+select * from kyc;
+\d+
+\d+
+select * from user_kyc limit 1;
+\d+
+CREATE DATABASE chai-v2;
+CREATE DATABASE chai_v2;
+CREATE DATABASE chai_v2;
+\l
+\l
+\c chai_v2
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+\c chai-v2
+\c chai_v2
+\c chai_v2
+\d+
+SELECT * FROM pg_stat_activity WHERE datname = 'old_dbname';
+SELECT * FROM pg_stat_activity WHERE datname = 'chai_v2';
+SELECT * FROM pg_stat_activity WHERE datname = 'chai_v2';
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai_v2';
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai';
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai';
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai_v2';
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'chai';
+ALTER DATABASE chai RENAME TO chai_legacy;
+\l
+\l
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai';
+SELECT count(1) FROM pg_stat_activity WHERE datname = 'chai_v2';
+SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'chai_v2';
+ALTER DATABASE chai_v2 RENAME TO chai;
+\l
+\d+
+\d+
+\l
+\l
+create table temp_import;
+GRANT CONNECT ON DATABASE chai_v2 TO chaidev, teadev;
+GRANT USAGE ON SCHEMA public TO chaidev, teadev;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO chaidev, teadev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO chaidev, teadev;
+GRANT INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO chaidev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT INSERT, UPDATE ON TABLES TO chaidev;
+GRANT CONNECT ON DATABASE chai TO chaidev, teadev;
+GRANT USAGE ON SCHEMA public TO chaidev, teadev;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO chaidev, teadev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO chaidev, teadev;
+GRANT INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO chaidev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT INSERT, UPDATE ON TABLES TO chaidev;
+SELECT * FROM information_schema.table_privileges
+;
+\d+
+create table CREATE TABLE alembic_version (version_num VARCHAR(32) NOT NULL, CONSTRAINT alembic_version_pkc PRIMARY KEY (version_num));
+CREATE TABLE alembic_version (version_num VARCHAR(32) NOT NULL, CONSTRAINT alembic_version_pkc PRIMARY KEY (version_num));
+GRANT CONNECT ON DATABASE chai TO chaidev, teadev;
+GRANT USAGE ON SCHEMA public TO chaidev, teadev;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO chaidev, teadev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO chaidev, teadev;
+GRANT INSERT, UPDATE ON ALL TABLES IN SCHEMA public TO chaidev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT INSERT, UPDATE ON TABLES TO chaidev;
+INSERT INTO "sources" ("type") VALUES ('crates'), ('npm'), ('pypi'), ('rubygems'), ('github'), ('homebrew'), ('debian'), ('pkgx') ON CONFLICT (type) DO NOTHING;
+select * from information_schema.table_privileges;
+select * from information_schema.table_privileges;
+select grantor, grantee, table_name, privileges from information_schema.privileges;
+select * from information_schema.table_privileges limit 1;
+select grantor, grantee, table_name, privilege_type from information_schema.privileges;
+select grantor, grantee, table_name, privilege_type from information_schema.table_privileges;
+\l
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+\l
+\c temp_chai
+create database temp_chai;
+\c temp_chai
+\d
+\c temp_chai
+\l
+pd
+\d
+\d
+\l
+\d
+select count(1) from legacy_dependencies;
+select count(1) from legacy_dependencies;
+select count(1) from legacy_dependencies;
+\l
+\l
+\d+
+create table temp_chai.public.depends_on_types as (select * from chai.public.depends_on_types);
+select * from temp_chai.public.legacy_dependencies limit 1;
+select * from temp_chai.legacy_dependencies limit 1;
+create extension postgres_fdw;
+create server localsrv foreign data wrapper postgres_fdw options (host 'localhost', dbname 'chai', port '5430');
+create user mapping for gardener server localsrv OPTIONS (user 'gardener', password 'CHANGE_ME_NOW!!');
+IMPORT FOREIGN SCHEMA public FROM SERVER localsrv INTO public;
+create server localsrv foreign data wrapper postgres_fdw options (host 'chai-sepolia-replica.catanyxr85nt.us-east-1.rds.amazonaws.com', dbname 'chai', port '5432');
+drop server localsrv
+;
+drop server localsrv cascade;
+create server localsrv foreign data wrapper postgres_fdw options (host 'chai-sepolia-replica.catanyxr85nt.us-east-1.rds.amazonaws.com', dbname 'chai', port '5432');
+create user mapping for gardener server localsrv OPTIONS (user 'gardener', password 'CHANGE_ME_NOW!!');
+IMPORT FOREIGN SCHEMA public FROM SERVER localsrv INTO public;
+drop server localsrv cascade;
+create extension dblink;
+SELECT dblink_connect('otherdb','host=localhost port=5430 dbname=chai user=gardener password=CHANGE_ME_NOW!! options=-csearch_path=');
+SELECT * FROM dblink('chai', 'select * from public.packages');
+SELECT dblink_connect('otherdb','host=localhost port=5430 dbname=temp_chai user=gardener password=CHANGE_ME_NOW!! options=-csearch_path=');
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','SELECT * FROM legacy_dependencies') AS tb2;
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','SELECT * FROM legacy_dependencies') AS tb2
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','SELECT package_id FROM legacy_dependencies') AS tb2
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','SELECT package_id, dependency_id, depends_on_type_id FROM legacy_dependencies') AS tb2(package_id uuid, dependency_id uuid, depends_on_type_id uuid)
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','SELECT package_id, dependency_id, depends_on_type_id FROM legacy_dependencies') AS tb2(package_id uuid, dependency_id uuid, depends_on_type_id uuid)
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai','password=CHANGE_ME_NOW!!','SELECT package_id, dependency_id, depends_on_type_id FROM legacy_dependencies') AS tb2(package_id uuid, dependency_id uuid, depends_on_type_id uuid)
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+SELECT * 
+FROM   depends_on_types tb1 
+LEFT   JOIN (
+   SELECT *
+   FROM   dblink('dbname=temp_chai, password=CHANGE_ME_NOW!!','SELECT package_id, dependency_id, depends_on_type_id FROM legacy_dependencies') AS tb2(package_id uuid, dependency_id uuid, depends_on_type_id uuid)
+) AS tb2 ON tb2.depends_on_type_id = tb1.id;
+select dblink('dbname=temp_chai, dbuser=gardener, password=CHANGE_ME_NOW!!', 'select package_id from legacy_dependencies limit 10') as x(package_id uuid);
+select dblink('dbname=temp_chai, dbuser=gardener, password=CHANGE_ME_NOW!!', 'select package_id from legacy_dependencies limit 10') as tb2(package_id uuid);
+select * from dblink('dbname=temp_chai, dbuser=gardener, password=CHANGE_ME_NOW!!', 'select package_id from legacy_dependencies limit 10') as tb2(package_id uuid);
+select * from dblink('dbname=temp_chai, dbuser=gardener, password=CHANGE_ME_NOW!!', 'select package_id from legacy_dependencies limit 10') as tb2(package_id uuid);
+\c temp_chai
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'chai');
+create extension dblink;
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'chai');
+CREATE USER regress_dblink_user WITH PASSWORD 'CHANGE_ME_NOW!!';
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'regress_dblink_user', password 'CHANGE_ME_NOW!!');
+drop server fdtest cascade
+;
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'chai');
+CREATE USER regress_dblink_user WITH PASSWORD 'CHANGE_ME_NOW!!';
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'gardener', password 'CHANGE_ME_NOW!!');
+GRANT USAGE ON FOREIGN SERVER fdtest TO regress_dblink_user;
+GRANT SELECT ON TABLE packages TO regress_dblink_user;
+GRANT SELECT ON TABLE legacy_dependencies TO regress_dblink_user;
+whoami
+;
+select current_user;
+\set ORIGINAL_USER :USER
+;
+select current_user;
+\c - regress_dblink_user
+SELECT dblink_connect('myconn', 'fdtest');
+SELECT * FROM dblink('myconn', 'SELECT id FROM packages') AS t(id uuid);
+\c temp_chai
+SELECT * FROM dblink('myconn', 'SELECT id FROM packages limit 1') AS t(id uuid);
+SELECT dblink_connect('myconn', 'fdtest');
+select current_user;
+drop server fdtest cascade
+;
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'chai');
+CREATE USER regress_dblink_user WITH PASSWORD 'CHANGE_ME_NOW!!';
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'gardener', password 'CHANGE_ME_NOW!!');
+GRANT USAGE ON FOREIGN SERVER fdtest TO regress_dblink_user;
+GRANT SELECT ON TABLE packages TO regress_dblink_user;
+GRANT SELECT ON TABLE legacy_dependencies TO regress_dblink_user;
+\set ORIGINAL_USER :USER
+\c regress_dblink_user
+\set ORIGINAL_USER :USER;
+\c regress_dblink_user
+select current_user;
+\set ORIGINAL_USER :USER
+\c - regress_dblink_user
+SELECT dblink_connect('myconn', 'fdtest');
+\d
+select * from legacy_dependencies limit 1;
+SELECT * FROM dblink('myconn', 'SELECT id, name FROM packages limit 1') AS t(id uuid, name text);
+create table depends_on_types as select * from dblink('myconn', 'select id, name, created_at, updated_at from depends_on_types') as t(id uuid, name text, created_at timestamp, updated_at timestamp);
+select current_user;
+\c - gardener
+GRANT USAGE ON SCHEMA public TO regress_dblink_user;
+GRANT INSERT, UPDATE, CREATE, SELECT ON ALL TABLES IN SCHEMA public TO regress_dblink_user;
+GRANT INSERT, UPDATE, SELECT ON ALL TABLES IN SCHEMA public TO regress_dblink_user;
+GRANT CREATE ON SCHEMA public TO regress_dblink_user;
+\c - regress_dblink_user
+create table depends_on_types as select * from dblink('myconn', 'select id, name, created_at, updated_at from depends_on_types') as t(id uuid, name text, created_at timestamp, updated_at timestamp);
+SELECT dblink_connect('myconn', 'fdtest');
+create table depends_on_types as select * from dblink('myconn', 'select id, name, created_at, updated_at from depends_on_types') as t(id uuid, name text, created_at timestamp, updated_at timestamp);
+\l
+\d
+create table depends_on_types as select * from dblink('myconn', 'select id, derived_id, name, package_manager_id, import_id, readme, created_at, updated_at from packages') as t(id uuid, derived_id text, name text, import_id text, readme text, created_at timestamp, updated_at timestamp);
+create table packages as select * from dblink('myconn', 'select id, derived_id, name, package_manager_id, import_id, readme, created_at, updated_at from packages') as t(id uuid, derived_id text, name text, import_id text, readme text, created_at timestamp, updated_at timestamp);
+create table packages as select * from dblink('myconn', 'select id, derived_id, name, package_manager_id, import_id, readme, created_at, updated_at from packages') as t(id uuid, derived_id text, name text, package_manager_id uui, import_id text, readme text, created_at timestamp, updated_at timestamp);
+create table packages as select * from dblink('myconn', 'select id, derived_id, name, package_manager_id, import_id, readme, created_at, updated_at from packages') as t(id uuid, derived_id text, name text, package_manager_id uuid, import_id text, readme text, created_at timestamp, updated_at timestamp);
+alter table legacy_dependencies add constraint uq_package_id_dependency_id unique (package_id, dependency_id);
+\c - gardener
+alter table legacy_dependencies add constraint uq_package_id_dependency_id unique (package_id, dependency_id);
+alter table legacy_dependencies add constraint fk_package_id foreign key (package_id) references packages(id);
+alter table packages add constraint uq_id unique (id);
+alter table legacy_dependencies add constraint fk_package_id foreign key (package_id) references packages(id);
+alter table legacy_dependencies add constraint fk_package_id foreign key (package_id) references packages(id);
+alter table legacy_dependencies add constraint fk_package_id foreign key (package_id) references packages(id);
+\c chai
+SELECT dblink_connect('myconn', 'fdtest');
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'temp_chai');
+CREATE USER regress_dblink_user WITH PASSWORD 'CHANGE_ME_NOW!!';
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'gardener', password 'CHANGE_ME_NOW');
+GRANT USAGE ON FOREIGN SERVER fdtest TO regress_dblink_user;
+GRANT SELECT ON TABLE legacy_dependencies TO regress_dblink_user;
+\c - regress_dblink_user
+SELECT dblink_connect('myconn', 'fdtest');
+DROP SERVER fdtest CASCADE;
+\c gardener
+\c - gardener
+DROP SERVER fdtest CASCADE;
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'temp_chai');
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'gardener', password 'CHANGE_ME_NOW');
+GRANT USAGE ON FOREIGN SERVER fdtest TO regress_dblink_user;
+GRANT SELECT ON TABLE legacy_dependencies TO regress_dblink_user;
+\c - regress_dblink_user
+DROP SERVER fdtest cascadee;
+DROP SERVER fdtest cascade;
+CREATE SERVER fdtest FOREIGN DATA WRAPPER dblink_fdw OPTIONS (hostaddr '127.0.0.1', dbname 'temp_chai');
+CREATE USER MAPPING FOR regress_dblink_user SERVER fdtest OPTIONS (user 'gardener', password 'CHANGE_ME_NOW!!');
+GRANT USAGE ON FOREIGN SERVER fdtest TO regress_dblink_user;
+GRANT SELECT ON TABLE legacy_dependencies TO regress_dblink_user;
+\c - regress_dblink_user
+SELECT dblink_connect('myconn', 'fdtest');
+create table temp_import as select * from dblink('myconn', 'select package_id, dependency_id, dependency_type_id, semver_range, created_at, updated_at from legacy_dependencies') as t(package_id uuid, dependency_id uuid, dependency_type_id uuid, semver_rage text, created_at timestamp, updated_at timestamp);
+\c - gardener
+GRANT CREATE ON SCHEMA public TO regress_dblink_user;
+\c - regress_dblink_user
+create table temp_import as select * from dblink('myconn', 'select package_id, dependency_id, dependency_type_id, semver_range, created_at, updated_at from legacy_dependencies') as t(package_id uuid, dependency_id uuid, dependency_type_id uuid, semver_rage text, created_at timestamp, updated_at timestamp);
+SELECT dblink_connect('myconn', 'fdtest');
+create table temp_import as select * from dblink('myconn', 'select package_id, dependency_id, dependency_type_id, semver_range, created_at, updated_at from legacy_dependencies') as t(package_id uuid, dependency_id uuid, dependency_type_id uuid, semver_rage text, created_at timestamp, updated_at timestamp);
+select * from temp_import;
+\q
+\l
+\l
+\q
+drop database temp_chai;
+\l
+\q
+create table package_urls_temp_import like package_urls
+;
+create table package_urls_temp_import (like package_urls);
+\q
+create table package_urls_temp_import (like package_urls);
+\q
+select * from canons limit 2;
+select * from canons limit 3;
+update canons set url = 'https://github.com/sanchitram1/obsidian-memex-clipper.git' where id = '52290365-12ea-4f11-a986-ead1f66ed24c';
+select & from canons limit 3;
+select * from canons limit 3;
+select * from canons where id = '52290365-12ea-4f11-a986-ead1f66ed24c';
+update canons set name = 'test-project' where id = '52290365-12ea-4f11-a986-ead1f66ed24c';
+select pu.url_id from canon_packages cp join package_urls pu on cp.package_id = pu.package_id 
+;
+select pu.url_id from canon_packages cp join package_urls pu on cp.package_id = pu.package_id where cp.canon_id = '52290365-12ea-4f11-a986-ead1f66ed24c';
+select * from urls where u.id in ('fa798ce2-208d-4f1d-9954-d3f9d7a2fb5c', '4aebc609-b7f1-4633-bc55-c5b46c338c62')
+;
+select * from urls where id in ('fa798ce2-208d-4f1d-9954-d3f9d7a2fb5c', '4aebc609-b7f1-4633-bc55-c5b46c338c62')
+;
+update urls set url = 'github.com/sanchitram1/obsidian-memex-clipper.git' where id = '4aebc609-b7f1-4633-bc55-c5b46c338c62'
+;
+select pu.url_id from canon_packages cp join package_urls pu on cp.package_id = pu.package_id where cp.canon_id = '52290365-12ea-4f11-a986-ead1f66ed24c';
+\q
+\d+ canons
+\d+ canons
+SELECT * FROM pg_indexes WHERE tablename = 'canons';
+\d+ urls
+SELECT * FROM pg_indexes WHERE tablename = 'urls';
+SELECT * FROM pg_stat_progress_create_index;
+\d+ urls
+SELECT * FROM pg_stat_progress_create_index;
+\d+ urls
+SELECT * FROM pg_stat_progress_create_index;
+SELECT * FROM pg_stat_progress_create_index;
+\d+ canons
+\d+ canons
+\d+ urls
+explain SELECT DISTINCT ON (c.id)
+  c.id AS "projectId",
+  c.url AS homepage,
+  c.name,
+  u.url AS source,
+  (
+    SELECT ARRAY_AGG(DISTINCT s.type)
+    FROM canon_packages cp2
+    JOIN packages p2 ON cp2.package_id = p2.id
+    JOIN package_managers pm2 ON p2.package_manager_id = pm2.id
+    JOIN sources s ON pm2.source_id = s.id
+    WHERE cp2.canon_id = c.id
+  ) AS "packageManagers"
+FROM canons c
+JOIN canon_packages cp ON cp.canon_id = c.id
+JOIN package_urls pu ON pu.package_id = cp.package_id
+JOIN urls u ON pu.url_id = u.id
+JOIN url_types ut ON ut.id = u.url_type_id
+WHERE ut.name = 'source' AND (u.url ILIKE '%tiny%' OR c.name ilike '%tiny%')
+ORDER BY c.id, u.url
+LIMIT 10;
+\d+ urls
+\d+ urls
+\d+ urls
+\d+ canons
+SELECT * FROM pg_stat_progress_create_index;
+\d+ urls
+SELECT * FROM pg_stat_progress_create_index;
+\d+ urls
+grant delete on table legacy_dependencies to chaidev;
+\q
+grant insert on legacy_dependencies to chaidev;
+grant usage on sequence legacy_dependencies_id_seq to chaidev;
+grant delete to chaidev on canon_packages;
+grant delete to chaidev to canon_packages;
+grant delete on canon_packages to chaidev;
+\q
+grant delete on canons to chaidev;
+\q
+grant delete on package_urls to chaidev;
+grant delete on urls to chaidev;
+grant delete on legacy_dependencies to chaidev;
+grant delete on user_packages to chaidev;
+grant delete on packages to chaidev;
+\q
+\d
+create database chai_v2;
+GRANT ALL PRIVILEGES ON DATABASE "chai-v2" TO chaidev;
+GRANT ALL PRIVILEGES ON DATABASE "chai_v2" TO chaidev;
+\c chai_v2
+GRANT USAGE, CREATE ON SCHEMA public TO chaidev;
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO chaidev;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON TABLES TO chaidev;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO chaidev;  
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT ALL PRIVILEGES ON SEQUENCES TO chaidev;
+\c chai_v2 chaidev
+\c
+\t
+\t
+\d
+\d+
+\l+
+\l
+\l
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+CREATE EXTENSION IF NOT EXISTS pg_trgm;
+\d+
+\d+
+\i /Users/sanch/tea/chai-oss/alembic/load-values.sql
+\q
+select count(1) from packages;
+\d+
+\d
+\d+
+select * from course limit 10;
+select * from course where term = '2025S' order by credits desc, title
+;
+\d
+select * from student limit 1
+;
+select * from assignment limit 10 ;
+select * from enrollment limit 10 ;
+select s.student_id, s.name from enrollment e join student s on s.student_id = e.student_id where course_id = 'CS201' and student_id not in (select student_id from enrollment where course_id = 'IEOR101');
+select s.student_id, s.name from enrollment e join student s on s.student_id = e.student_id where course_id = 'CS201' and e.student_id not in (select student_id from enrollment where course_id = 'IEOR101');
+select dept_name, course_id from courses group by dept_name having max(credits);
+select dept_name, course_id from course group by dept_name having max(credits);
+select * from course limit 10;
+select * from course group by dept_id having max(credits);
+select * from course group by dept_id having max(credits) = 4;
+select dept_id from course group by dept_id having max(credits) = 4;
+select dept_id, max(credits) from course group by dept_id
+l
+;
+select dept_id, max(credits) from course group by dept_id;
+select * from course c join (select dept_id, max(credits) max_credits from course group by dept_id) x on c.credits = x.max_credits and x.dept_id = c.dept_id);
+select * from course c join (select dept_id, max(credits) max_credits from course group by dept_id) x on c.credits = x.max_credits and x.dept_id = c.dept_id;
+\d+
+\d
+select * from course limit 1;
+select * from enrollment limit 1;
+select * from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id limit 2
+;
+select * from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id limit 2;
+select e.student_id as student_id, e.course_id as enrolled_in_course, c.dept_id as course_department_id, s.dept_id as student_department_id from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id limit 2;
+select e.student_id as student_id, e.course_id as enrolled_in_course, c.dept_id as course_department_id, s.dept_id as student_department_id from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id limit 10;
+select e.student_id as student_id, e.course_id as enrolled_in_course, c.dept_id as course_department_id, s.dept_id as student_department_id from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id where c.dept_id <> s.dept_id limit 10;
+select e.student_id as student_id, e.course_id as enrolled_in_course, c.dept_id as course_department_id, s.dept_id as student_department_id from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id where c.dept_id != s.dept_id;
+select e.student_id as student_id, e.course_id as enrolled_in_course, c.dept_id as course_department_id, s.dept_id as student_department_id from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id where c.dept_id != s.dept_id group by e.student_id having count(e.course_id) >= 1
+;
+select e.student_id as student_id, count(e.course_id) from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id where c.dept_id != s.dept_id group by e.student_id having count(e.course_id) >= 1;
+select e.student_id as student_id, count(e.course_id) from enrollment e join course c on c.course_id = e.course_id join student s on s.student_id = e.student_id where c.dept_id != s.dept_id group by e.student_id having count(e.course_id) >= 1;
+\d+
+\q
+\i schema.sql
+\i schema.sql
+\i schema.sql
+\i schema.sql
+\i schema.sql
+\i seed.sql
+CREATE USER guest WITH PASSWORD 'iLoveDBs365247!';
+GRANT CONNECT ON DATABASE postgres TO guest;
+GRANT USAGE ON SCHEMA public TO guest;
+GRANT SELECT ON ALL TABLES IN SCHEMA public TO guest;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO guest;
+REVOKE CREATE ON SCHEMA public FROM public;
+ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT ON TABLES TO guest;
+\u guest
+\s guest
