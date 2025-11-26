@@ -1,7 +1,5 @@
 # run like
-# ❯ uv run main.py -p YetAnotherDatabasePassword513!
-# OR
-# python main.py -p YetAnotherDatabasePassword513!
+# ❯ uv run main.py -p user_password
 import argparse
 import os
 
